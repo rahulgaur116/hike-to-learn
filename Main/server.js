@@ -35,6 +35,13 @@ app.get("/login", (req,res) => {
     res.render("login", body)
 });
 
+app.get("/flashcards", (req,res) => {
+    const body = {
+        body: "test"
+    }
+    res.render("flashcards", body)
+});
+
 //setup app the listen
 app.listen(PORT, () => console.log('Now listening'));
 

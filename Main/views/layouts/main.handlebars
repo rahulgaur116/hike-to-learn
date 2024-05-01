@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hike to Learn!</title>
+  <title>Hike to Learn</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -14,8 +14,12 @@
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
         <span role="img" aria-label="hike">🥾</span>
-        <a href="/">Hike to Learn!</a>
+        <a id= "title" href="/">Hike to Learn</a>
       </h1>
+        <a href="/flashcards">Quiz Yourself!</a>
+         <a href="/login">Login</a>
+
+
       <nav>
         <!-- once backend is setup, Conditionally render login or logout links -->
         {{!-- {{#if logged_in}}
@@ -39,6 +43,11 @@
   {{!-- {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}} --}}
+
+  {{!-- Script --}}
+  <script src="/js/flashcards.js">
+  
+  </script>
 </body>
 
 </html>
