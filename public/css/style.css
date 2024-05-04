@@ -8,7 +8,7 @@
 }
 
 #title {
-  color: #049960;
+  color: #090909;
 }
 
 /* Create flashcard buttton on the homepage */
@@ -46,7 +46,7 @@
 #promotional-banner {
   padding: 10px;
   width: 100%;
-  background-color: rgb(238, 238, 147);
+  background-color: rgb(238, 238, 63);
 }
 
 #flashcard-button {
