@@ -1,31 +1,13 @@
-<!-- Loop over each object in the projects array -->
 
-{{!-- for backend --}}
-{{!-- {{#each projects as |project| }} --}}
+{{!-- {{HTML for Homepage}} --}}
 <div class="background-image">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{!-- {{{get_emoji}}} --}}
-
-      {{!-- for backend --}}
-      {{!-- <a href="/project/{{project.id}}">{{project.name}}</a> --}}
-    </h2>
-    <p>
-      {{!-- <span for="img" aria-label="money">🍎</span> --}}
-      <!-- Pass needed_funding value to the helper function -->
-      
-      {{!-- for backend --}}
-
-      {{!-- <span class="dollar-amount">{{format_amount project.needed_funding}}</span> --}}
-     {{!-- Test Text --}}
-    </p>
-    {{!-- <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p> --}}
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{!-- {{project.description}} --}}
-    </p>
+  <div class="create-container">
+    <button class="create-button animate__animated animate__bounce"   id="promotional-banner">
+      Let's take a hike...
+    </button>
+      <button class="create-button"   id="flashcard-button">
+      Create a Flashcard!
+    </button>
   </div>
 </div>
-{{!-- {{/each}} --}}
+

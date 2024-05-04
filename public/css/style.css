@@ -8,7 +8,55 @@
 }
 
 #title {
-  color: #07be78;
+  color: #049960;
+}
+
+/* Create flashcard buttton on the homepage */
+.create-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 375px;
+  align-items: center;
+}
+
+.create-button {
+  padding: 10px;
+ display: flex;
+ justify-content: center;
+  
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%
+}
+
+#flashcard-link {
+  color: black
+}
+#difficulty-link {
+  color: black
+}
+#login-link {
+  color: black
+}
+
+#promotional-banner {
+  padding: 10px;
+  width: 100%;
+  background-color: rgb(238, 238, 147);
+}
+
+#flashcard-button {
+  padding: 10px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 10%;
+  border-radius: 0.6em;
 }
 
 /* Styling for flashcards */
@@ -177,6 +225,36 @@ textarea:focus {
 .hide {
   display: none;
 }
+
+.difficulty-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 300px;
+  background-image: url('../assets/difficulty-image.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.difficulty-button {
+  padding: 20px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 100%;
+  border-radius: 0.6em;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
 @media screen and (max-width: 800px) {
   .card-list-container {
     grid-template-columns: 1fr 1fr;
