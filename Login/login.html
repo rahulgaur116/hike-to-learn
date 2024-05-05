@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+    <div class="card">
+        <h2>Login Form</h2>
+        <form action="#">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter Password">
+            </div>
+            <div class="text-cnetr">
+                <button type="button" onclick="savedata()" class="btn bth-primary" id="save_btn">Submit</button>
+            </div>
+
+        </form>
+    </div>  
+    </div>
+</body>
+
+<script>
+
+function savedata(){
+
+    let email,password;
+    email=document.getElementById("email").value;
+    password=document.getElementById("password").value;
+
+    let user_record=new Array(); 
+    user_record= JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+
+    if(user_record.some((v)=>{
+          return v.email==email && v.password==password
+
+    })){
+        alert("Login Successfull")
+let current_user=user_record.filter((v)=>{
+    return v.email==email && v.password==password
+
+}) [0]
+ localStorage.setItem("name",current_user.name);
+ localStorage.setItem("email",current_user.email);
+ window.location.href="profile.html"
+}
+  else{
+ alert("Login Failed");
+}
+
+}
+
+</script>
+</html>
