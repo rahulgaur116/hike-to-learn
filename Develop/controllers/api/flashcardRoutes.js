@@ -1,13 +1,12 @@
-// Need to edit to match with USER model/sql //
-
+// Need to edit for FLASHCARD model/sql //
 const router = require("express").Router();
-const Book = require("../../models/Book");
+const Flashcard = require("../../models/Flashcard");
 
-// GET all books
+// GET all flashcards
 router.get("/", (req, res) => {
   // Get all books from the book table
   // select * from book;
-  Book.findAll().then((bookData) => {
+  Flashcard.findAll().then((bData) => {
     res.json(bookData);
   });
 });

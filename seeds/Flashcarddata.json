@@ -1,0 +1,16 @@
+[
+    {
+        "questions": "What is 1 + 1 ?",
+        "answers": "2",
+        "user_id": 1,
+        "difficulty": "Hard"
+
+    },
+    {
+        "questions": "What is 2 + 2 ?",
+        "answers": "4",
+        "user_id": 2,
+        "difficulty": "Medium"
+
+    }
+]
