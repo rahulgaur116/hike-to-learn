@@ -50,7 +50,27 @@
 
 #signup-link {
   color: black
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.signup-form form {
+  width: 25%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form form {
+  width: 25%;
 }
 
 #promotional-banner {
