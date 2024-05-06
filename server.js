@@ -24,22 +24,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Created homepage route and login route
 app.get("/", (req,res) => {
-    const body = {
-        body: "test"
-    }
-    res.render("homepage", body)
+     const logged_in = true
+    res.render("homepage", {logged_in})
 });
 
 app.get("/login", (req,res) => {
-    const body = {
-        body: "test"
-    }
-    res.render("login", body)
+    const logged_in = true
+    res.render("login", {logged_in})
 });
 
 app.get("/flashcards", (req,res) => {
-  
-    res.render("flashcards")
+    const logged_in = true
+    res.render("flashcards", {logged_in})
+});
+
+app.get("/difficulty", (req,res) => {
+    const logged_in = true
+    res.render("difficulty", {logged_in})
 });
 
 app.use(routes)

@@ -7,35 +7,37 @@
   <title>Hike to Learn</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="hike">🥾</span>
-        <a id= "title" href="/">Hike to Learn</a>
-      </h1>
-        <a href="/flashcards">Quiz Yourself!</a>
-         <a href="/login">Login</a>
-
+    <header class="header">
+      <div class="title-link">
+        <h1>
+          <span role="img" aria-label="hike">🥾</span>
+          <a id="title" href="/">Hike to Learn</a>
+        </h1>
+      </div>
 
       <nav>
-        <!-- once backend is setup, Conditionally render login or logout links -->
-        {{!-- {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}} --}}
+        <div class="header-links">
+          {{#if logged_in}}
+          <a href="/flashcards" id="flashcard-link">Create Flashcard</a>
+            <a href="/difficulty" id="difficulty-link">Difficulty</a>
+          {{/if}}
+          <a href="/login" id="login-link">Login-Signup</a>
+        </div>
+
       </nav>
+
     </header>
     <main class="TBD">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
     <footer>
-      
+
     </footer>
   </div>
 
@@ -46,7 +48,7 @@
 
   {{!-- Script --}}
   <script src="/js/flashcards.js">
-  
+
   </script>
 </body>
 
