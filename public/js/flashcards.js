@@ -31,13 +31,40 @@ closeBtn.addEventListener(
 //Submit User Question
 cardButton.addEventListener(
   "click",
-  (submitQuestion = () => {
+  (submitQuestion = async () => {
     editBool = false;
-    tempQuestion = question.value.trim();
-    tempAnswer = answer.value.trim();
+    let tempQuestion = question.value.trim();
+    let tempAnswer = answer.value.trim();
+    let difficulty = document.getElementById("difficulty").value
+
+    // console.log("this is difficutly ==== ", difficulty)
     if (!tempQuestion || !tempAnswer) {
       errorMessage.classList.remove("hide");
     } else {
+      //post request
+      // /api/flashcard
+
+      let response = await fetch("/api/flashcard", {
+        method: "POST",
+        body: JSON.stringify({
+          questions: tempQuestion,
+          answers: tempAnswer,
+          user_id: 1 ,
+          difficulty: difficulty   
+        }),
+        headers: {'Content-Type':'application/json'}
+      })
+
+
+      console.log("THIS IS LINE 55 THE RESPONSE VALUE = ",response)
+
+      if(response.ok){
+        alert(" successfully added")
+      }else{
+        alert("something whent wrong")
+      }
+
+
       container.classList.remove("hide");
       errorMessage.classList.add("hide");
       viewlist();

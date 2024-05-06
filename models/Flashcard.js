@@ -26,6 +26,10 @@ Flashcard.init(
         key: 'id',
       },
     },
+    difficulty:{
+      type: DataTypes.STRING,
+    
+    }
   },
   {
     sequelize,

@@ -38,10 +38,8 @@ app.get("/login", (req,res) => {
 });
 
 app.get("/flashcards", (req,res) => {
-    const body = {
-        body: "test"
-    }
-    res.render("flashcards", body)
+  
+    res.render("flashcards")
 });
 
 app.use(routes)
