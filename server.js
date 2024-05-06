@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 const helpers = require('./utils/helpers');
-
+// ADD SESSION CONST //
 const routes = require("./controllers")
 
 const exphbs = require('express-handlebars');
