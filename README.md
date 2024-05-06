@@ -16,6 +16,16 @@ A playful and innovative online platform where the thrill of hiking meets the jo
 5.	Go ahead and open your browser and type in http://localhost3001 to access the application.
 6.	Now, have fun taking your virtual hike while having a great learning experience!
 
+# Results 
+
+
+
+
+
+# URLs
+- Deployed: 
+- Github: https://github.com/rahulgaur116/hike-to-learn
+
 
 
 
