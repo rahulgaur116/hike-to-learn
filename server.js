@@ -2,6 +2,8 @@ const path = require('path');
 const express = require('express');
 const helpers = require('./utils/helpers');
 
+const routes = require("./controllers")
+
 const exphbs = require('express-handlebars');
 
 
@@ -42,6 +44,8 @@ app.get("/flashcards", (req,res) => {
     res.render("flashcards", body)
 });
 
+app.use(routes)
+
 //setup app the listen
-app.listen(PORT, () => console.log('Now listening'));
+app.listen(PORT, () => console.log('Now listening Running on PORT = ', PORT));
 
