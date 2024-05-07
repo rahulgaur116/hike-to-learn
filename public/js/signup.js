@@ -6,14 +6,14 @@ const signUp = async e => {
 
 
     if (fname && lname && email && pwd) {
-        const response = await fetch('/api/users', {
+        const response = await fetch('/api/user', {
           method: 'POST',
           body: JSON.stringify({ fname, lname, email, pwd }),
           headers: { 'Content-Type': 'application/json' },
         });
     
         if (response.ok) {
-          document.location.replace('/profile');
+          document.location.replace('/');
         } else {
           alert(response.statusText);
         }
