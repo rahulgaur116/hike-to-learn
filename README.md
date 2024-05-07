@@ -18,13 +18,13 @@ A playful and innovative online platform where the thrill of hiking meets the jo
 
 # Results 
 
-![alt text](image.png)
+![image](https://github.com/rahulgaur116/hike-to-learn/assets/156866171/0abe6b85-859c-45c9-83e4-1aa62bf81c05)
 
-![alt text](image-1.png) 
 
-![alt text](image-2.png)
+![image](https://github.com/rahulgaur116/hike-to-learn/assets/156866171/f3f7201d-ddcf-4c9c-bb86-bb7e583615ea)
 
-![alt text](image-3.png)
+![image](https://github.com/rahulgaur116/hike-to-learn/assets/156866171/b345724c-8c74-407b-a1ed-7aa410ba616b)
+
 
 ![image](https://github.com/rahulgaur116/hike-to-learn/assets/156866171/eb2a3680-623e-4d6d-8428-13277413fbf9)
 
@@ -75,7 +75,7 @@ A playful and innovative online platform where the thrill of hiking meets the jo
  # Features
 - Node.js 
 - Express.js
-- PostgresSQL
+- PostgreSQL
 - DBeaver
 -  Render
 - Insomnia
