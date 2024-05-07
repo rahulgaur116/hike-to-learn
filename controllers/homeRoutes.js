@@ -23,6 +23,12 @@ router.get("/", (req,res) => {
         logged_in: req.session.logged_in})
  });
  
+
+
+
+
+ 
+
  router.get("/flashcards", (req,res) => {
  
      res.render("flashcards", {
