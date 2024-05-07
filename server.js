@@ -42,31 +42,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session(sess));
 
-// Created homepage route and login route
-app.get("/", (req,res) => {
-     const logged_in = true
-    res.render("homepage", {logged_in})
-});
 
-app.get("/signup", (req,res) => {
-    const logged_in = true
-    res.render("signup", {logged_in})
-});
-
-app.get("/login", (req,res) => {
-    const logged_in = true
-    res.render("login", {logged_in})
-});
-
-app.get("/flashcards", (req,res) => {
-    const logged_in = true
-    res.render("flashcards", {logged_in})
-});
-
-app.get("/difficulty", (req,res) => {
-    const logged_in = true
-    res.render("difficulty", {logged_in})
-});
 
 app.use(routes)
 

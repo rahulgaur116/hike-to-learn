@@ -1,14 +1,15 @@
 async function login(e) {
-    let email = document.getElementById('email').value, pwd = document.getElementById('pwd').value;
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('pwd').value;
     
-    if (email && pwd) {
+    if (email && password) {
         // Send a POST request to the API endpoint
-        const response = await fetch('/api/users/login', {
+        const response = await fetch('/api/user/login', {
           method: 'POST',
-          body: JSON.stringify({ email, pwd }),
+          body: JSON.stringify({ email, password }),
           headers: { 'Content-Type': 'application/json' },
         });
-    
+  
         if (response.ok) {
           // If successful, redirect the browser to the profile page
           document.location.replace('/');
