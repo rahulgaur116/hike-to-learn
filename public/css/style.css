@@ -33,6 +33,11 @@
   width: 100%
 }
 
+.header-links {
+  display: flex;
+  gap: 30px;
+}
+
 #flashcard-link {
   color: black
 }
@@ -41,6 +46,31 @@
 }
 #login-link {
   color: black
+}
+
+#signup-link {
+  color: black
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-form form {
+  width: 25%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form form {
+  width: 25%;
 }
 
 #promotional-banner {
@@ -57,6 +87,12 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   width: 10%;
   border-radius: 0.6em;
+}
+/* Styling for login button */
+
+#login-button {
+  width: 100%;
+
 }
 
 /* Styling for flashcards */
