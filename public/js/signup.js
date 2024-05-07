@@ -1,14 +1,14 @@
 const signUp = async e => {
-    let fname = document.getElementById('fname').value,
-        lname = document.getElementById('lname').value,
-        email = document.getElementById('email').value,
-        pwd = document.getElementById('pwd').value;
+   
+    let username = document.getElementById('username').value;
+    let  email = document.getElementById('email').value;
+    let  password = document.getElementById('pwd').value;
+    
 
-
-    if (fname && lname && email && pwd) {
+    if (username && email && password) {
         const response = await fetch('/api/user', {
           method: 'POST',
-          body: JSON.stringify({ fname, lname, email, pwd }),
+          body: JSON.stringify({ username, email, password}),
           headers: { 'Content-Type': 'application/json' },
         });
     

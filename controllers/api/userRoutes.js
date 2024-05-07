@@ -5,6 +5,7 @@ const {User} = require("../../models")
 //    /api/user
 router.post("/",  async(req, res)=>{
     try{
+        console.log(req.body)
         const userInfo = await User.create(req.body)
         console.log("this works")
         req.session.save(()=>{
@@ -19,19 +20,23 @@ router.post("/",  async(req, res)=>{
     }
 })
 
+///  /api/user/login
 router.post('/login', async (req, res) => {
+  console.log("We are in the login routes for user!!!!")
     try {
       const userData = await User.findOne({ where: { email: req.body.email } });
-  
+      console.log("THIS IS USRE DATA = ",userData)
       if (!userData) {
         res
           .status(400)
           .json({ message: 'Incorrect email or password, please try again' });
         return;
       }
-  
+      console.log("!!!!!!!!")
       const validPassword = await userData.checkPassword(req.body.password);
-  
+
+      console.log("THIS IS PASSWORD = ", validPassword)
+    
       if (!validPassword) {
         res
           .status(400)
