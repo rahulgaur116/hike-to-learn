@@ -9,21 +9,32 @@ A playful and innovative online platform where the thrill of hiking meets the jo
 
 # Usage 
 
-1.	Right click on “server.js” in order to open your terminal.
-2.	Ensure all required packages are installed as required.  (Ex. Node, NPM, NPM Start)
-3.	Make Database connections. 
+1.	Ensure all required packages are installed as required. Check Database connections.   (Ex. Node, NPM, NPM Start)
+2.  Create your own .env file 
+3.	Right click on “server.js” in order to open your terminal.
 4.	Type “node server.js” within your terminal. 
 5.	Go ahead and open your browser and type in http://localhost3001 to access the application.
 6.	Now, have fun taking your virtual hike while having a great learning experience!
 
 # Results 
 
+![alt text](image.png)
+
+![alt text](image-1.png) 
+
+
+
+
+
+
+
+
 
 
 
 
 # URLs
-- Deployed: 
+- Deployed: hike-to-learn.onrender.com
 - Github: https://github.com/rahulgaur116/hike-to-learn
 
 
@@ -39,6 +50,9 @@ A playful and innovative online platform where the thrill of hiking meets the jo
 - Katherine Velasco  GitHub:https://github.com/katvela24
 - Rahul Sharma GitHub:https://github.com/rahulgaur116
 - Yamil Hernandez GitHub:https://github.com/yamilhp5
+
+# Test
+ The application was tested using Insomnia, Render.com, and Postgres. 
 
 
 
