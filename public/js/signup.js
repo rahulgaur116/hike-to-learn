@@ -1,27 +1,30 @@
-const signUp = e => {
+const signUp = async e => {
     let fname = document.getElementById('fname').value,
         lname = document.getElementById('lname').value,
         email = document.getElementById('email').value,
         pwd = document.getElementById('pwd').value;
 
-    let formData = JSON.parse(localStorage.getItem('formData')) || [];
 
-    let exist = formData.length && 
-        JSON.parse(localStorage.getItem('formData')).some(data => 
-            data.fname.toLowerCase() == fname.toLowerCase() && 
-            data.lname.toLowerCase() == lname.toLowerCase()
-        );
-
-    if(!exist){
-        formData.push({ fname, lname, email, pwd });
-        localStorage.setItem('formData', JSON.stringify(formData));
-        document.querySelector('form').reset();
-        document.getElementById('fname').focus();
-        alert("Account Created.\n\nPlease Sign In using the link below.");
-    }
-    else{
-        alert("Ooopppssss... Duplicate found!!!\nYou have already sigjned up");
-    }
+    if (fname && lname && email && pwd) {
+        const response = await fetch('/api/users', {
+          method: 'POST',
+          body: JSON.stringify({ fname, lname, email, pwd }),
+          headers: { 'Content-Type': 'application/json' },
+        });
+    
+        if (response.ok) {
+          document.location.replace('/profile');
+        } else {
+          alert(response.statusText);
+        }
+      }
+      
     e.preventDefault();
-}
+    };
+
+ document.getElementById('form').addEventListener("click", function(e){
+
+    signUp(e)
+ })
+
 

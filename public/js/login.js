@@ -1,13 +1,25 @@
-function login(e) {
+async function login(e) {
     let email = document.getElementById('email').value, pwd = document.getElementById('pwd').value;
-    let formData = JSON.parse(localStorage.getItem('formData')) || [];
-    let exist = formData.length && 
-    JSON.parse(localStorage.getItem('formData')).some(data => data.email.toLowerCase() == email && data.pwd.toLowerCase() == pwd);
-    if(!exist){
-        alert("Incorrect login credentials");
-    }
-    else{
-        location.href = "/";
-    }
+    
+    if (email && pwd) {
+        // Send a POST request to the API endpoint
+        const response = await fetch('/api/users/login', {
+          method: 'POST',
+          body: JSON.stringify({ email, pwd }),
+          headers: { 'Content-Type': 'application/json' },
+        });
+    
+        if (response.ok) {
+          // If successful, redirect the browser to the profile page
+          document.location.replace('/profile');
+        } else {
+          alert(response.statusText);
+        }
+      }
+
     e.preventDefault();
 }
+document.getElementById('form').addEventListener("click", function(e){
+
+    login(e)
+ })
