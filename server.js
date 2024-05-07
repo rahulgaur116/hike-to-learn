@@ -4,6 +4,7 @@ const helpers = require('./utils/helpers');
 // ADD SESSION CONST //
 const session = require('express-session');
 const routes = require("./controllers")
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const exphbs = require('express-handlebars');
 
@@ -11,6 +12,21 @@ const exphbs = require('express-handlebars');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+const sess = {
+    secret: 'Super secret secret',
+    cookie: {
+      maxAge: 300000,
+      httpOnly: true,
+      secure: false,
+      sameSite: 'strict',
+    },
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({
+      db: sequelize
+    })
+  };
+  
 // once backend, Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });
 
@@ -22,6 +38,7 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session(sess));
 
 // Created homepage route and login route
 app.get("/", (req,res) => {
@@ -52,5 +69,7 @@ app.get("/difficulty", (req,res) => {
 app.use(routes)
 
 //setup app the listen
+sequelize.sync({ force: false }).then(() => {
 app.listen(PORT, () => console.log('Now listening Running on PORT = ', PORT));
+});
 
