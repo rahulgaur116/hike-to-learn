@@ -22,6 +22,11 @@ A playful and innovative online platform where the thrill of hiking meets the jo
 
 ![alt text](image-1.png) 
 
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+
 
 
 
@@ -34,7 +39,7 @@ A playful and innovative online platform where the thrill of hiking meets the jo
 
 
 # URLs
-- Deployed: hike-to-learn.onrender.com
+- Deployed: (https://hike-to-learn.onrender.com/)
 - Github: https://github.com/rahulgaur116/hike-to-learn
 
 
